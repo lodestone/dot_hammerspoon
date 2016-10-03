@@ -9,7 +9,7 @@ local E = require('hs.application.watcher')   -- appwindows events
 local A = require('appactions')               -- appwindows actions
 
 -- Monospace font used in multiple modules
-local MONOFONT = 'Fira Mono'
+local MONOFONT = 'Eco Coding'
 
 --------------------
 --  global paths  --
@@ -17,11 +17,11 @@ local MONOFONT = 'Fira Mono'
 cfg.global.paths = {}
 cfg.global.paths.base  = os.getenv('HOME')
 cfg.global.paths.tmp   = os.getenv('TMPDIR')
-cfg.global.paths.bin   = ufile.toPath(cfg.global.paths.base, 'bin')
-cfg.global.paths.cloud = ufile.toPath(cfg.global.paths.base, 'Dropbox')
+cfg.global.paths.bin   = ufile.toPath(cfg.global.paths.base, '.bin')
+cfg.global.paths.cloud = ufile.toPath(cfg.global.paths.base, '=/Cloud/Dropbox')
 cfg.global.paths.hs    = ufile.toPath(cfg.global.paths.base, '.hammerspoon')
-cfg.global.paths.data  = ufile.toPath(cfg.global.paths.hs,   'data')
-cfg.global.paths.media = ufile.toPath(cfg.global.paths.hs,   'media')
+cfg.global.paths.data  = ufile.toPath(cfg.global.paths.base,   '=/Cabinet/data')
+cfg.global.paths.media = ufile.toPath(cfg.global.paths.base,   '=/Media')
 cfg.global.paths.ul    = '/usr/local'
 cfg.global.paths.ulbin = ufile.toPath(cfg.global.paths.ul,   'bin')
 
@@ -56,7 +56,7 @@ cfg.browser = {
   },
 }
 
-cfg.browser.defaultApp = 'org.mozilla.firefox'
+cfg.browser.defaultApp = 'com.apple.Safari'
 
 ----------------
 --  caffeine  --
@@ -110,7 +110,7 @@ cfg.hazel = {
 cfg.notational = {
   titleWeight = 5,  -- title is this much more search-relevant than content
   width = 60,
-  rows  = 15,
+  rows  = 10,
   path = {
     notes = ufile.toPath(cfg.global.paths.cloud, 'notes'),  -- the default location
     til   = ufile.toPath(cfg.global.paths.cloud, 'til'),
@@ -145,9 +145,9 @@ cfg.timer = {
   menupriority = 1350,            -- menubar priority (lower is lefter)
   width = 28,
   defaultTime = 5*60,  -- in seconds
-  icon  = ufile.toPath(cfg.global.paths.media, 'tidy-clock-icon.png'),
-  sound = ufile.toPath(cfg.global.paths.media, 'alert.caf'),
   volume = 1.0,
+  icon  = ufile.toPath(cfg.global.paths.media, 'tidy-clock-icon.png'),
+  sound = ufile.toPath(cfg.global.paths.media, 'Audio/Claptap.mp3'),
 }
 
 ---------------

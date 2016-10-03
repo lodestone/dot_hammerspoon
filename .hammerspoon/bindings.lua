@@ -19,15 +19,15 @@ function bindings.bind()
   -- launch and focus applications
   -- (all use hyper key)
   hs.fnutils.each({
-    {key = 'b',  app = 'Google Chrome'},   -- "b"rowser
-    {key = 'c',  app = 'Slack'},           -- "c"hat
+    -- {key = 'b',  app = 'Google Chrome'},   -- "b"rowser
+    -- {key = 'c',  app = 'Slack'},           -- "c"hat
     {key = 'f',  app = 'Finder'},
-    {key = 'i',  app = 'iTunes'},
+    -- {key = 'i',  app = 'iTunes'},
     {key = 'm',  app = 'Messages'},
-    {key = 'q',  app = 'Qbserve'},
-    {key = 's',  app = 'Spotify'},
+    -- {key = 'q',  app = 'Qbserve'},
+    -- {key = 's',  app = 'Spotify'},
     {key = 't',  app = 'iTerm'},           -- "t"erminal
-    {key = 'v',  app = 'nvimOpen'},        -- "v"im
+    -- {key = 'v',  app = 'nvimOpen'},        -- "v"im
     {key = '\'', app = 'Color Picker'},
   }, function(item)
     local appActivation = function()
@@ -66,26 +66,26 @@ function bindings.bind()
   -- module key bindings
   -- (all using shift-hyper)
   hs.fnutils.each({
-    {key = '0',  fn = hsm.worktime.nextMode},
-    {key = '1',  fn = hsm.songs.rateSong1},
-    {key = '2',  fn = hsm.songs.rateSong2},
-    {key = '3',  fn = hsm.songs.rateSong3},
-    {key = '4',  fn = hsm.songs.rateSong4},
-    {key = '5',  fn = hsm.songs.rateSong5},
-    {key = '8',  fn = hsm.worktime.pauseUnpause},
-    {key = '9',  fn = hsm.worktime.reset},
-    {key = '[',  fn = hsm.songs.prevTrack},
-    {key = '\\', fn = hsm.caffeine.toggle},
-    {key = ']',  fn = hsm.songs.nextTrack},
-    {key = '`',  fn = hsm.songs.rateSong0},
-    {key = 'c',  fn = hsm.cheatsheet.cycle},
-    {key = 'm',  fn = uapp.toggleSkypeMute},
-    {key = 'p',  fn = hsm.songs.playPause},
+    -- {key = '0',  fn = hsm.worktime.nextMode},
+    -- {key = '1',  fn = hsm.songs.rateSong1},
+    -- {key = '2',  fn = hsm.songs.rateSong2},
+    -- {key = '3',  fn = hsm.songs.rateSong3},
+    -- {key = '4',  fn = hsm.songs.rateSong4},
+    -- {key = '5',  fn = hsm.songs.rateSong5},
+    -- {key = '8',  fn = hsm.worktime.pauseUnpause},
+    -- {key = '9',  fn = hsm.worktime.reset},
+    -- {key = '[',  fn = hsm.songs.prevTrack},
+    -- {key = '\\', fn = hsm.caffeine.toggle},
+    -- {key = ']',  fn = hsm.songs.nextTrack},
+    -- {key = '`',  fn = hsm.songs.rateSong0},
+    -- {key = 'c',  fn = hsm.cheatsheet.cycle},
+    -- {key = 'm',  fn = uapp.toggleSkypeMute},
+    -- {key = 'p',  fn = hsm.songs.playPause},
     {key = 'r',  fn = hs_reload},
-    {key = 's',  fn = hsm.cheatsheet.toggle},
-    {key = 't',  fn = hsm.songs.getInfo},
+    -- {key = 's',  fn = hsm.cheatsheet.toggle},
+    -- {key = 't',  fn = hsm.songs.getInfo},
     {key = 'v',  fn = uapp.forcePaste},
-    {key = 'x',  fn = hsm.cheatsheet.chooserToggle},
+    -- {key = 'x',  fn = hsm.cheatsheet.chooserToggle},
     {key = 'y',  fn = toggleConsole},
     {key = 'z',  fn = maximizeFrontmost},
   }, function(object)
@@ -93,12 +93,13 @@ function bindings.bind()
   end)
 
   -- bindings for the spacebar
-  hs.hotkey.bind({'alt'},    hs.keycodes.map.space, hsm.scratchpad.toggle)
-  hs.hotkey.bind(mod.as,     hs.keycodes.map.space, hsm.timer.toggle)
-  hs.hotkey.bind(mod.hyper,  hs.keycodes.map.space, hsm.notational.toggle)
-  hs.hotkey.bind(mod.shyper, hs.keycodes.map.space, function()
-    hsm.notational.toggle(hsm.notational.cfg.path.til)
-  end)
+  -- hs.hotkey.bind({'alt'},    hs.keycodes.map.space, hsm.scratchpad.toggle)
+  -- hs.hotkey.bind(mod.as,     hs.keycodes.map.space, hsm.timer.toggle)
+  -- hs.hotkey.bind(mod.hyper,  hs.keycodes.map.space, hsm.notational.toggle)
+  -- hs.hotkey.bind({'alt'}, 'n', hsm.notational.toggle)
+  -- hs.hotkey.bind(mod.shyper, hs.keycodes.map.space, function()
+    -- hsm.notational.toggle(hsm.notational.cfg.path.til)
+  -- end)
 end
 
 return bindings

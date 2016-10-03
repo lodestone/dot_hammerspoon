@@ -13,8 +13,8 @@ local lastApp = nil
 local chooser = nil
 local matchCache = {}
 local rankCache = {}
-local allChoices = nil
-local currentPath = nil
+local allChoices = {}
+local currentPath = {"/Users/z/=/Cortex-Mind"}
 local lastQueries = {}
 local visible = false
 
@@ -216,7 +216,7 @@ function m.show(path)
     lastApp = hs.application.frontmostApplication()
     matchCache = {}
     rankCache = {}
-    currentPath = path or m.cfg.path.notes
+    currentPath = path or '/Users/z/=/Cortex-Mind'
     chooser:query(getLastQuery())
     allChoices = getAllChoices()
     chooser:show()
@@ -238,7 +238,7 @@ function m.start()
   chooser:rows(m.cfg.rows)
   chooser:queryChangedCallback(queryChangedCallback)
   chooser:choices(allChoices)
-  currentPath = m.cfg.path.notes
+  currentPath = '/Users/z/=/Cortex-Mind'
 end
 
 function m.stop()

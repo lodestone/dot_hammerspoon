@@ -1,4 +1,4 @@
-Copy example_config.lua to config.lua and modify as needed.
+## Hammerspoon
 
 
 
